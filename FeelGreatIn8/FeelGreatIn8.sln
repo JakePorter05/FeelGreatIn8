@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeelGreatIn8.Android", "Fee
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeelGreatIn8.iOS", "FeelGreatIn8.iOS\FeelGreatIn8.iOS.csproj", "{679DAB51-9771-44E9-AA35-48539B5F5A7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeelGreatIn8", "FeelGreatIn8\FeelGreatIn8.csproj", "{0C4038CD-6380-4307-92FA-9363DF4753A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeelGreatIn8", "FeelGreatIn8\FeelGreatIn8.csproj", "{0C4038CD-6380-4307-92FA-9363DF4753A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,7 +38,6 @@ Global
 		{D1E6B95A-1BB6-4756-A5FB-F0E0A8082AEF}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{D1E6B95A-1BB6-4756-A5FB-F0E0A8082AEF}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
 		{679DAB51-9771-44E9-AA35-48539B5F5A7D}.Debug|Any CPU.ActiveCfg = Debug|iPhone
-		{679DAB51-9771-44E9-AA35-48539B5F5A7D}.Debug|Any CPU.Build.0 = Debug|iPhone
 		{679DAB51-9771-44E9-AA35-48539B5F5A7D}.Debug|Any CPU.Deploy.0 = Debug|iPhone
 		{679DAB51-9771-44E9-AA35-48539B5F5A7D}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{679DAB51-9771-44E9-AA35-48539B5F5A7D}.Debug|iPhone.Build.0 = Debug|iPhone

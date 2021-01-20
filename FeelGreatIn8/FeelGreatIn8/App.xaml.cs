@@ -1,8 +1,4 @@
-﻿using FeelGreatIn8.Services;
-using FeelGreatIn8.Views;
-using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace FeelGreatIn8
 {
@@ -13,7 +9,6 @@ namespace FeelGreatIn8
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 

@@ -1,7 +1,4 @@
-﻿using FeelGreatIn8.ViewModels;
-using FeelGreatIn8.Views;
-using System;
-using System.Collections.Generic;
+﻿using FeelGreatIn8.Views;
 using Xamarin.Forms;
 
 namespace FeelGreatIn8
@@ -11,13 +8,7 @@ namespace FeelGreatIn8
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
-        }
-
-        private async void OnMenuItemClicked(object sender, EventArgs e)
-        {
-            await Shell.Current.GoToAsync("//LoginPage");
+            Routing.RegisterRoute(nameof(TaskPage), typeof(TaskPage));
         }
     }
 }

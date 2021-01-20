@@ -26,7 +26,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "monoandroid90"
+          "monoandroid10.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\DevExpress 18.1\\Components\\System\\Components\\Packages": {},
@@ -35,7 +35,7 @@
           "https://nuget.devexpress.com/3ba4jNU6YfSOizxYnHYDdfkyorKWBRH8Lttx2zWvXRv36rgfkI/api": {}
         },
         "frameworks": {
-          "monoandroid90": {
+          "monoandroid10.0": {
             "projectReferences": {
               "D:\\Jake_Porter_05\\FeelGreatIn8\\FeelGreatIn8\\FeelGreatIn8\\FeelGreatIn8.csproj": {
                 "projectPath": "D:\\Jake_Porter_05\\FeelGreatIn8\\FeelGreatIn8\\FeelGreatIn8\\FeelGreatIn8.csproj"
@@ -45,15 +45,19 @@
         }
       },
       "frameworks": {
-        "monoandroid90": {
+        "monoandroid10.0": {
           "dependencies": {
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.5.3.2, )"
+              "version": "[1.6.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.8.0.1451, )"
+              "version": "[5.0.0.1905, )"
             }
           }
         }
@@ -110,13 +114,21 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.5.3.2, )"
+              "version": "[1.6.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.8.0.1451, )"
+              "version": "[5.0.0.1905, )"
             }
           },
           "imports": [
@@ -129,7 +141,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
