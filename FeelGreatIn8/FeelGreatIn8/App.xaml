@@ -7,8 +7,11 @@
     -->
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="Primary">Black</Color>
-            <Color x:Key="Accent">lime</Color>
+
+            <Color x:Key="Accent">Lime</Color>
+            <Color x:Key="Primary">Navy</Color>
+            <Color x:Key="Secondary">Blue</Color>
+
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="VisualStateManager.VisualStateGroups">
@@ -29,9 +32,25 @@
                 </Setter>
             </Style>
 
+            <LinearGradientBrush x:Key="BackgroundGradient">
+                <GradientStopCollection>
+                    <GradientStop Offset="0" Color="{StaticResource Primary}" />
+                    <GradientStop Offset="0.3" Color="{StaticResource Secondary}" />
+                    <GradientStop Offset="0.6" Color="{StaticResource Secondary}" />
+                    <GradientStop Offset="1" Color="{StaticResource Primary}" />
+                </GradientStopCollection>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="ButtonGradient">
+                <GradientStopCollection>
+                    <GradientStop Offset="0" Color="{StaticResource Accent}" />
+                    <GradientStop Offset="1" Color="{StaticResource Primary}" />
+                </GradientStopCollection>
+            </LinearGradientBrush>
+
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource Accent}" />
-                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="FontSize" Value="Medium" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

@@ -76,6 +76,7 @@ D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8.Android\obj\Debug\100\a
 D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8.Android\obj\Debug\100\android\assets\mscorlib.dll
 D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8.Android\obj\Debug\100\android\assets\mscorlib.pdb
 D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8.Android\obj\Debug\100\android\assets\netstandard.dll
+D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8.Android\obj\Debug\100\android\assets\Newtonsoft.Json.dll
 D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8.Android\obj\Debug\100\android\assets\System.ComponentModel.Composition.dll
 D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8.Android\obj\Debug\100\android\assets\System.ComponentModel.Composition.pdb
 D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8.Android\obj\Debug\100\android\assets\System.Core.dll
@@ -591,4 +592,3 @@ D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8.Android\obj\Debug\100\s
 D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8.Android\obj\Debug\100\stamp\_GenerateJavaStubs.stamp
 D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8.Android\obj\Debug\100\stamp\_GeneratePackageManagerJava.stamp
 D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8.Android\obj\Debug\100\stamp\_ResolveLibraryProjectImports.stamp
-D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8.Android\obj\Debug\100\android\assets\Newtonsoft.Json.dll

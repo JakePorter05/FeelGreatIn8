@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
+using Xamarin.CommunityToolkit.ObjectModel;
 
 namespace FeelGreatIn8.ViewModels
 {
@@ -21,20 +22,44 @@ namespace FeelGreatIn8.ViewModels
 
         #region Properties
 
-        private Day day;
-        public Day Day
+        private ObservableRangeCollection<Day> days;
+        public ObservableRangeCollection<Day> Days
         {
-            get { return day; }
+            get { return days; }
             set
             {
-                if (value != day)
+                if (value != days)
                 {
-                    SetProperty(ref day, value);
+                    SetProperty(ref days, value);
                 }
             }
         }
 
-        public IList<Day> Days { get; set; }
+        private Day selectedDay;
+        public Day SelectedDay
+        {
+            get { return selectedDay; }
+            set
+            {
+                if (value != selectedDay)
+                {
+                    SetProperty(ref selectedDay, value);
+                }
+            }
+        }
+
+        private int position;
+        public int Position
+        {
+            get { return position; }
+            set
+            {
+                if (value != position)
+                {
+                    SetProperty(ref position, value);
+                }
+            }
+        }
 
         #endregion
 
@@ -47,6 +72,7 @@ namespace FeelGreatIn8.ViewModels
         public TaskViewModel()
         {
             Title = "Feel Great In 8";
+            Days = new ObservableRangeCollection<Day>();
 
             if (!File.Exists(filePath))
             {
@@ -58,46 +84,53 @@ namespace FeelGreatIn8.ViewModels
 
         #region Class Methods
 
-        internal void ChangeFruitVeg(double newValue)
-        {
-            Day.FruitVeg = (int)newValue;
-        }
-
-        internal void ChangeFood(double newValue)
-        {
-            Day.Food = (int)newValue;
-        }
-
-        internal void ChangeWater(double newValue)
-        {
-            Day.Water = (int)newValue;
-        }
-
         internal void OnAppearing()
-        {
+         {
             var text = File.ReadAllText(filePath);
-            Days = JsonConvert.DeserializeObject<List<Day>>(text);
-            if (Days != null)
+            var result = JsonConvert.DeserializeObject<List<Day>>(text);
+            
+            if (result == null)
             {
-                var result = Days.FirstOrDefault(x => x.Date.Day == DateTimeOffset.Now.Day &&
-                                                  x.Date.Month == DateTimeOffset.Now.Month &&
-                                                  x.Date.Year == DateTimeOffset.Now.Year);
-                if (result != null)
+                var template = new List<Day>()
                 {
-                    Day = result;
-                }
-                else
-                {
-                    Day = new Day();
-                    Days.Add(Day);
-                }
+                    new Day
+                    {
+                        DayName = "Monday",
+                    },
+                    new Day
+                    {
+                        DayName = "Tuesday",
+                    },
+                    new Day
+                    {
+                        DayName = "Wednesday",
+                    },
+                    new Day
+                    {
+                        DayName = "Thursday",
+                    },
+                    new Day
+                    {
+                        DayName = "Friday",
+                    },
+                    new Day
+                    {
+                        DayName = "Saturday",
+                    },
+                    new Day
+                    {
+                        DayName = "Sunday",
+                    },
+                };
+                Days.ReplaceRange(template);
             }
             else
             {
-                Day = new Day();
-                Days = new List<Day>();
-                Days.Add(Day);
+                Days.ReplaceRange(result);
             }
+            var today = DateTime.Now.DayOfWeek.ToString();
+            SelectedDay = Days.FirstOrDefault(x => today.Contains(x.DayName));
+            Position = Days.IndexOf(SelectedDay);
         }
 
         internal void Disappearing()

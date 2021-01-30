@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "G/N6rweXDW0YKGgodsBzT6cQJsTGiGBpZE6HYdYPgCMohjYv2caZ670U2GsYelns1jpR+4a4VsinYZnelmzVWQ==",
+  "dgSpecHash": "/WYJPc0azvBmqhIqOn62eVRUU0jhxurJskUkWZVNg6U+4FagLsn6jPUGxxi2ThKGc9A3VDHllftTfjwpjM2HZA==",
   "success": true,
   "projectFilePath": "D:\\Jake_Porter_05\\FeelGreatIn8\\FeelGreatIn8\\FeelGreatIn8.iOS\\FeelGreatIn8.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jakep\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\jakep\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\jakep\\.nuget\\packages\\xamarin.communitytoolkit\\1.0.1\\xamarin.communitytoolkit.1.0.1.nupkg.sha512",
-    "C:\\Users\\jakep\\.nuget\\packages\\xamarin.essentials\\1.6.0\\xamarin.essentials.1.6.0.nupkg.sha512",
-    "C:\\Users\\jakep\\.nuget\\packages\\xamarin.forms\\5.0.0.1905\\xamarin.forms.5.0.0.1905.nupkg.sha512"
+    "C:\\Users\\jakep\\.nuget\\packages\\xamarin.communitytoolkit\\1.0.2\\xamarin.communitytoolkit.1.0.2.nupkg.sha512",
+    "C:\\Users\\jakep\\.nuget\\packages\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Users\\jakep\\.nuget\\packages\\xamarin.forms\\5.0.0.1931\\xamarin.forms.5.0.0.1931.nupkg.sha512"
   ],
   "logs": []
 }

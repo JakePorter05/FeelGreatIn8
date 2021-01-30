@@ -9,6 +9,7 @@ namespace FeelGreatIn8
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(TaskPage), typeof(TaskPage));
+            Routing.RegisterRoute(nameof(SettingPage), typeof(SettingPage));
         }
     }
 }

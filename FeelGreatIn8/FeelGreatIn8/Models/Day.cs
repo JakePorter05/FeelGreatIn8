@@ -83,11 +83,17 @@ namespace FeelGreatIn8.Models
             }
         }
 
-        public DateTimeOffset Date { get; set; }
-
-        public Day()
+        private string dayName;
+        public string DayName
         {
-            Date = DateTimeOffset.Now;
+            get { return dayName; }
+            set
+            {
+                if (value != dayName)
+                {
+                    SetProperty(ref dayName, value);
+                }
+            }
         }
     }
 }

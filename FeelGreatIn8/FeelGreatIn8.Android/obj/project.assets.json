@@ -878,7 +878,7 @@
           "buildTransitive/monoandroid90/Xamarin.AndroidX.ViewPager2.targets": {}
         }
       },
-      "Xamarin.CommunityToolkit/1.0.1": {
+      "Xamarin.CommunityToolkit/1.0.2": {
         "type": "package",
         "dependencies": {
           "Xamarin.Forms": "5.0.0.1874"
@@ -896,15 +896,14 @@
           "build/Xamarin.CommunityToolkit.targets": {}
         }
       },
-      "Xamarin.Essentials/1.6.0": {
+      "Xamarin.Essentials/1.6.1": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0",
           "Xamarin.AndroidX.Browser": "1.3.0"
         },
         "frameworkAssemblies": [
-          "Java.Interop",
-          "System.Numerics"
+          "Java.Interop"
         ],
         "compile": {
           "lib/monoandroid10.0/Xamarin.Essentials.dll": {}
@@ -913,7 +912,7 @@
           "lib/monoandroid10.0/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/5.0.0.1905": {
+      "Xamarin.Forms/5.0.0.1931": {
         "type": "package",
         "dependencies": {
           "Xamarin.AndroidX.Browser": "1.3.0",
@@ -988,9 +987,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "12.0.3",
-          "Xamarin.CommunityToolkit": "1.0.1",
-          "Xamarin.Essentials": "1.6.0",
-          "Xamarin.Forms": "5.0.0.1905"
+          "Xamarin.CommunityToolkit": "1.0.2",
+          "Xamarin.Essentials": "1.6.1",
+          "Xamarin.Forms": "5.0.0.1931"
         },
         "compile": {
           "bin/placeholder/FeelGreatIn8.dll": {}
@@ -1854,10 +1853,10 @@
         "xamarin.androidx.viewpager2.nuspec"
       ]
     },
-    "Xamarin.CommunityToolkit/1.0.1": {
-      "sha512": "Tn+hASKMbpHywJLGDJcmF/AywvPGEO8/iUR+zaETLqFDy1ZqI/07Ur5Mcd7tcMLKA8Ff7SbDCpasC5LnAwyJAw==",
+    "Xamarin.CommunityToolkit/1.0.2": {
+      "sha512": "P1vwT40rpeY66M1kpJyfO/yYuverdIuamN0w8FHgT4x+mcDf0G4tspCztMMYle1BSeisrtvOKToQMLDYfBz9uQ==",
       "type": "package",
-      "path": "xamarin.communitytoolkit/1.0.1",
+      "path": "xamarin.communitytoolkit/1.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1879,14 +1878,14 @@
         "lib/xamarinmac20/Xamarin.CommunityToolkit.dll",
         "lib/xamarintvos10/Xamarin.CommunityToolkit.dll",
         "lib/xamarinwatchos10/Xamarin.CommunityToolkit.dll",
-        "xamarin.communitytoolkit.1.0.1.nupkg.sha512",
+        "xamarin.communitytoolkit.1.0.2.nupkg.sha512",
         "xamarin.communitytoolkit.nuspec"
       ]
     },
-    "Xamarin.Essentials/1.6.0": {
-      "sha512": "geJYnjTyPv2npClIkBxLXk9cOV9CPwj/oayA8I4+6NpZc/dIiYxax36m25SW8TrCMR/rvyY44fZBjWBvj7BCQQ==",
+    "Xamarin.Essentials/1.6.1": {
+      "sha512": "gG1Bp4j4bpJQ0dp9MeBJQJ9c8xULauIlhc7Cx5Qw4J2K1c+4Glq5n+gkb9Pm0UA/CevXVqLK5ZXmZkuYI52FgA==",
       "type": "package",
-      "path": "xamarin.essentials/1.6.0",
+      "path": "xamarin.essentials/1.6.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1930,14 +1929,14 @@
         "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
         "lib/xamarinwatchos10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.6.0.nupkg.sha512",
+        "xamarin.essentials.1.6.1.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/5.0.0.1905": {
-      "sha512": "0Kqs6vbNVdwFKd8RINMBqNziP0MYYPuko8LuyxVgAQ/wkrWh16Wl/8PFy10ykELF7bGwl0uKG7jJghQ7dh02ig==",
+    "Xamarin.Forms/5.0.0.1931": {
+      "sha512": "5xe9Oxtx2lHC0pinXGRLoUMEav3qxdtNemDF1UxCcxHcwv/Zcso2LhYw1LnemYhtESa6QGOD8dGM31A2pmteVg==",
       "type": "package",
-      "path": "xamarin.forms/5.0.0.1905",
+      "path": "xamarin.forms/5.0.0.1931",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2146,7 +2145,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.5.0.0.1905.nupkg.sha512",
+        "xamarin.forms.5.0.0.1931.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -2194,9 +2193,9 @@
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v10.0": [
       "FeelGreatIn8 >= 1.0.0",
-      "Xamarin.CommunityToolkit >= 1.0.1",
-      "Xamarin.Essentials >= 1.6.0",
-      "Xamarin.Forms >= 5.0.0.1905"
+      "Xamarin.CommunityToolkit >= 1.0.2",
+      "Xamarin.Essentials >= 1.6.1",
+      "Xamarin.Forms >= 5.0.0.1931"
     ]
   },
   "packageFolders": {
@@ -2249,15 +2248,15 @@
         "dependencies": {
           "Xamarin.CommunityToolkit": {
             "target": "Package",
-            "version": "[1.0.1, )"
+            "version": "[1.0.2, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",
-            "version": "[1.6.0, )"
+            "version": "[1.6.1, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[5.0.0.1905, )"
+            "version": "[5.0.0.1931, )"
           }
         }
       }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2nP+wYwulWXuM0uK6n7xZJHEa10y9eG+uvs2vpWyPf/Rhfs4B/7ZNAPrXkQ1Qcb4m4BBS9fxzORhHLXgimjcGg==",
+  "dgSpecHash": "r1hyjZyXGIknbxocJin0XB+kDpH23aXQA4Bk/NPm7lff/PswYML0vTvO/Nm1YVNWAIv7XGav+WTZwK6YCGzdkg==",
   "success": true,
   "projectFilePath": "D:\\Jake_Porter_05\\FeelGreatIn8\\FeelGreatIn8\\FeelGreatIn8.Android\\FeelGreatIn8.Android.csproj",
   "expectedPackageFiles": [
@@ -49,9 +49,9 @@
     "C:\\Users\\jakep\\.nuget\\packages\\xamarin.androidx.versionedparcelable\\1.1.1.6\\xamarin.androidx.versionedparcelable.1.1.1.6.nupkg.sha512",
     "C:\\Users\\jakep\\.nuget\\packages\\xamarin.androidx.viewpager\\1.0.0.6\\xamarin.androidx.viewpager.1.0.0.6.nupkg.sha512",
     "C:\\Users\\jakep\\.nuget\\packages\\xamarin.androidx.viewpager2\\1.0.0.7\\xamarin.androidx.viewpager2.1.0.0.7.nupkg.sha512",
-    "C:\\Users\\jakep\\.nuget\\packages\\xamarin.communitytoolkit\\1.0.1\\xamarin.communitytoolkit.1.0.1.nupkg.sha512",
-    "C:\\Users\\jakep\\.nuget\\packages\\xamarin.essentials\\1.6.0\\xamarin.essentials.1.6.0.nupkg.sha512",
-    "C:\\Users\\jakep\\.nuget\\packages\\xamarin.forms\\5.0.0.1905\\xamarin.forms.5.0.0.1905.nupkg.sha512",
+    "C:\\Users\\jakep\\.nuget\\packages\\xamarin.communitytoolkit\\1.0.2\\xamarin.communitytoolkit.1.0.2.nupkg.sha512",
+    "C:\\Users\\jakep\\.nuget\\packages\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Users\\jakep\\.nuget\\packages\\xamarin.forms\\5.0.0.1931\\xamarin.forms.5.0.0.1931.nupkg.sha512",
     "C:\\Users\\jakep\\.nuget\\packages\\xamarin.google.android.material\\1.1.0.5\\xamarin.google.android.material.1.1.0.5.nupkg.sha512",
     "C:\\Users\\jakep\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
   ],

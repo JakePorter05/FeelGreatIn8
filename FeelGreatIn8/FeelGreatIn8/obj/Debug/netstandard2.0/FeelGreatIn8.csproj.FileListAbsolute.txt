@@ -3,6 +3,7 @@ D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8\bin\Debug\netstandard2.
 D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8\bin\Debug\netstandard2.0\ref\FeelGreatIn8.dll
 D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8\bin\Debug\netstandard2.0\FeelGreatIn8.pdb
 D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
 D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8\obj\Debug\netstandard2.0\Views\TaskPage.xaml.g.cs
 D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8\obj\Debug\netstandard2.0\FeelGreatIn8.AssemblyInfoInputs.cache
 D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8\obj\Debug\netstandard2.0\FeelGreatIn8.AssemblyInfo.cs
@@ -12,4 +13,4 @@ D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8\obj\Debug\netstandard2.
 D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8\obj\Debug\netstandard2.0\ref\FeelGreatIn8.dll
 D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8\obj\Debug\netstandard2.0\FeelGreatIn8.pdb
 D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8\obj\Debug\netstandard2.0\FeelGreatIn8.csprojAssemblyReference.cache
-D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+D:\Jake_Porter_05\FeelGreatIn8\FeelGreatIn8\FeelGreatIn8\obj\Debug\netstandard2.0\Views\SettingPage.xaml.g.cs

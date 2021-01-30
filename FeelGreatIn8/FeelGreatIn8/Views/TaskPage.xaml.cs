@@ -25,20 +25,5 @@ namespace FeelGreatIn8.Views
             base.OnDisappearing();
             viewModel.Disappearing();
         }
-
-        private void stepper_FruitVeg(object sender, ValueChangedEventArgs e)
-        {
-            viewModel.ChangeFruitVeg(e.NewValue);
-        }
-
-        private void stepper_Food(object sender, ValueChangedEventArgs e)
-        {
-            viewModel.ChangeFood(e.NewValue);
-        }
-
-        private void stepper_Water(object sender, ValueChangedEventArgs e)
-        {
-            viewModel.ChangeWater(e.NewValue);
-        }
     }
 }

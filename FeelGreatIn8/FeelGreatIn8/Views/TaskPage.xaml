@@ -2,67 +2,115 @@
 <ContentPage x:Class="FeelGreatIn8.Views.TaskPage"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:FeelGreatIn8.Models"
              Title="{Binding Title}"
-             BackgroundColor="{StaticResource Primary}">
+             Background="{StaticResource ButtonGradient}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="DayTemplate" x:DataType="model:Day">
+                <ContentView>
+                    <Frame Padding="10"
+                           BackgroundColor="Black"
+                           CornerRadius="10">
+                        <Grid Padding="10"
+                              Background="{StaticResource BackgroundGradient}"
+                              ColumnDefinitions="*,*"
+                              ColumnSpacing="5"
+                              RowDefinitions="30,30,30,30,40,30,40,30,40,50,*"
+                              RowSpacing="5">
+                            <Label Grid.ColumnSpan="2"
+                                   HorizontalOptions="Center"
+                                   Text="{Binding DayName}" />
 
-    <Grid Margin="20"
-          ColumnDefinitions="Auto,Auto,*"
-          ColumnSpacing="20"
-          RowDefinitions="50,50,50,50,50,50"
-          RowSpacing="20">
+                            <Label Grid.Row="1"
+                                   HorizontalOptions="Start"
+                                   Text="Read"
+                                   VerticalOptions="Center" />
+                            <CheckBox Grid.Row="1"
+                                      Grid.Column="1"
+                                      IsChecked="{Binding Read}"
+                                      Color="{DynamicResource Accent}" />
 
-        <Label Text="Read" />
-        <CheckBox Grid.Column="1"
-                  Margin="25,0"
-                  IsChecked="{Binding Day.Read, Mode=TwoWay}"
-                  ScaleX="1.5"
-                  ScaleY="1.5"
-                  Color="{DynamicResource Accent}" />
+                            <Label Grid.Row="2"
+                                   HorizontalOptions="Start"
+                                   Text="Pray"
+                                   VerticalOptions="Center" />
+                            <CheckBox Grid.Row="2"
+                                      Grid.Column="1"
+                                      IsChecked="{Binding Pray}"
+                                      Color="{DynamicResource Accent}" />
 
-        <Label Grid.Row="1"
-               Text="Pray"
-               WidthRequest="100" />
-        <CheckBox Grid.Row="1"
-                  Grid.Column="1"
-                  Margin="25,0"
-                  IsChecked="{Binding Day.Pray, Mode=TwoWay}"
-                  ScaleX="1.5"
-                  ScaleY="1.5"
-                  Color="{DynamicResource Accent}" />
+                            <Label Grid.Row="3"
+                                   Grid.ColumnSpan="2"
+                                   Text="{Binding FruitVeg, StringFormat='{0}  -  Servings of fruits or vegetables.'}" />
+                            <Stepper Grid.Row="4"
+                                     Increment="1"
+                                     Maximum="5"
+                                     Minimum="0"
+                                     Value="{Binding FruitVeg}" />
 
-        <Label Grid.Row="2" Text="{Binding Day.FruitVeg, Mode=TwoWay, StringFormat='{0}  -  Servings of fruits or vegetables.'}" />
-        <Stepper Grid.Row="2"
-                 Grid.Column="1"
-                 Increment="1"
-                 Maximum="5"
-                 Minimum="0"
-                 ValueChanged="stepper_FruitVeg" />
+                            <Label Grid.Row="5"
+                                   Grid.ColumnSpan="2"
+                                   Text="{Binding Food, StringFormat='{0}  -  Servings of other positive Foods.'}" />
+                            <Stepper Grid.Row="6"
+                                     Increment="1"
+                                     Maximum="5"
+                                     Minimum="0"
+                                     Value="{Binding Food}" />
 
-        <Label Grid.Row="3" Text="{Binding Day.Food, Mode=TwoWay, StringFormat='{0}  -  Servings of other positive Foods.'}" />
-        <Stepper Grid.Row="3"
-                 Grid.Column="1"
-                 Increment="1"
-                 Maximum="5"
-                 Minimum="0"
-                 ValueChanged="stepper_Food" />
+                            <Label Grid.Row="7"
+                                   Grid.ColumnSpan="2"
+                                   Text="{Binding Water, StringFormat='{0}  -  Water in 8 ounce increments'}" />
+                            <Stepper Grid.Row="8"
+                                     Increment="1"
+                                     Maximum="10"
+                                     Minimum="0"
+                                     Value="{Binding Water}" />
 
-        <Label Grid.Row="4" Text="{Binding Day.Water, Mode=TwoWay, StringFormat='{0}  -  Water in 8 ounce increments'}" />
-        <Stepper Grid.Row="4"
-                 Grid.Column="1"
-                 Increment="1"
-                 Maximum="10"
-                 Minimum="0"
-                 ValueChanged="stepper_Water" />
+                            <Label Grid.Row="9" Text="Exercise in Minutes." />
+                            <Entry Grid.Row="9"
+                                   Grid.Column="1"
+                                   Keyboard="Numeric"
+                                   MaxLength="2"
+                                   Placeholder="0"
+                                   PlaceholderColor="{StaticResource Accent}"
+                                   ReturnType="Done"
+                                   Text="{Binding Exercise, Mode=TwoWay}"
+                                   TextColor="{StaticResource Accent}" />
+                        </Grid>
+                    </Frame>
+                </ContentView>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-        <Label Grid.Row="5" Text="Exercise in Minutes." />
-        <Entry Grid.Row="5"
-               Grid.Column="1"
-               Keyboard="Numeric"
-               MaxLength="2"
-               Placeholder="0"
-               PlaceholderColor="{StaticResource Accent}"
-               ReturnType="Done"
-               Text="{Binding Day.Exercise, Mode=TwoWay}"
-               TextColor="{StaticResource Accent}" />
+    <Grid RowDefinitions="*,100">
+        <CarouselView Margin="10"
+                      Grid.RowSpan="2"
+                      Loop="False"
+                      CurrentItem="{Binding SelectedDay}"
+                      IndicatorView="indicatorView"
+                      Position="{Binding Position}"
+                      ItemTemplate="{StaticResource DayTemplate}"
+                      ItemsSource="{Binding Days}">
+            <CarouselView.ItemsLayout>
+                <LinearItemsLayout ItemSpacing="10"
+                                   Orientation="Horizontal"
+                                   SnapPointsAlignment="Center"
+                                   SnapPointsType="MandatorySingle" />
+            </CarouselView.ItemsLayout>
+        </CarouselView>
+        <Frame 
+               Grid.Row="1"
+               BackgroundColor="LightGray"
+               CornerRadius="20"
+               VerticalOptions="Start"
+               HorizontalOptions="Center">
+            <IndicatorView x:Name="indicatorView"
+                           HorizontalOptions="Center"
+                           IndicatorColor="White"
+                           IndicatorSize="18"
+                           SelectedIndicatorColor="Black" />
+        </Frame>
     </Grid>
 </ContentPage>
