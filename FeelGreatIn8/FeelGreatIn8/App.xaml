@@ -2,35 +2,13 @@
 <Application x:Class="FeelGreatIn8.App"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <!--
-        Define global resources and styles here, that apply to all pages in your app.
-    -->
+    
     <Application.Resources>
         <ResourceDictionary>
 
             <Color x:Key="Accent">Lime</Color>
             <Color x:Key="Primary">Navy</Color>
             <Color x:Key="Secondary">Blue</Color>
-
-            <Style TargetType="Button">
-                <Setter Property="TextColor" Value="White" />
-                <Setter Property="VisualStateManager.VisualStateGroups">
-                    <VisualStateGroupList>
-                        <VisualStateGroup x:Name="CommonStates">
-                            <VisualState x:Name="Normal">
-                                <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
-                                </VisualState.Setters>
-                            </VisualState>
-                            <VisualState x:Name="Disabled">
-                                <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="#332196F3" />
-                                </VisualState.Setters>
-                            </VisualState>
-                        </VisualStateGroup>
-                    </VisualStateGroupList>
-                </Setter>
-            </Style>
 
             <LinearGradientBrush x:Key="BackgroundGradient">
                 <GradientStopCollection>
@@ -47,6 +25,21 @@
                     <GradientStop Offset="1" Color="{StaticResource Primary}" />
                 </GradientStopCollection>
             </LinearGradientBrush>
+
+            <Style TargetType="Button">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="Padding" Value="5" />
+                <Setter Property="BorderWidth" Value="2" />
+                <Setter Property="BorderColor" Value="Black" />
+                <Setter Property="TextColor" Value="{DynamicResource ColorIconText}" />
+                <Setter Property="Background" Value="{DynamicResource ButtonGradient}" />
+                <Setter Property="CornerRadius" Value="15" />
+            </Style>
 
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource Accent}" />

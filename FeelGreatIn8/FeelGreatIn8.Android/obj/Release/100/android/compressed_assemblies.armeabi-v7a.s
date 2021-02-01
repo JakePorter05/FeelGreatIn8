@@ -37,7 +37,7 @@
 
 	/* 1: FeelGreatIn8.dll */
 	/* uncompressed_file_size */
-	.long	568832
+	.long	572416
 	/* loaded */
 	.byte	0
 	/* data */

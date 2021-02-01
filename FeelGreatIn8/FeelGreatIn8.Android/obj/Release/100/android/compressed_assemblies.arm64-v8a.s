@@ -17,7 +17,7 @@
 
 	/* 1: FeelGreatIn8.dll */
 	/* uncompressed_file_size */
-	.word	568832
+	.word	572416
 	/* loaded */
 	.byte	0
 	/* data */

@@ -20,9 +20,9 @@
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
                 <Setter Property="Shell.TabBarBackgroundColor" Value="Black" />
-                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource Accent}" />
-                <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource Secondary}" />
-                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource Accent}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource Secondary}" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource Accent}" />
+                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource Secondary}" />
             </Style>
             <Style BasedOn="{StaticResource BaseStyle}" TargetType="TabBar" />
             <Style BasedOn="{StaticResource BaseStyle}" TargetType="FlyoutItem" />

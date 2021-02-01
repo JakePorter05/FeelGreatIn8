@@ -1,13 +1,13 @@
-﻿using FeelGreatIn8.Models;
-using System;
-using System.IO;
-using System.Diagnostics;
-using Xamarin.Essentials;
-using Xamarin.Forms;
+﻿using FeelGreatIn8.Core;
+using FeelGreatIn8.Models;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Xamarin.CommunityToolkit.ObjectModel;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace FeelGreatIn8.ViewModels
 {
@@ -35,19 +35,6 @@ namespace FeelGreatIn8.ViewModels
             }
         }
 
-        private Day selectedDay;
-        public Day SelectedDay
-        {
-            get { return selectedDay; }
-            set
-            {
-                if (value != selectedDay)
-                {
-                    SetProperty(ref selectedDay, value);
-                }
-            }
-        }
-
         private int position;
         public int Position
         {
@@ -56,6 +43,10 @@ namespace FeelGreatIn8.ViewModels
             {
                 if (value != position)
                 {
+                    if (position < 0)
+                    {
+                        value = 0;
+                    }
                     SetProperty(ref position, value);
                 }
             }
@@ -65,19 +56,25 @@ namespace FeelGreatIn8.ViewModels
 
         #region Commands
 
+        public Command ResetCommand { get; set; }
+
         #endregion
 
         #region Constructor
 
         public TaskViewModel()
         {
+            //Defaults
             Title = "Feel Great In 8";
-            Days = new ObservableRangeCollection<Day>();
 
+            //Make sure directory is there
             if (!File.Exists(filePath))
             {
                 File.Create(filePath);
             }
+
+            //Sub to the message from settings
+            ResetCommand = new Command(ResetMethod);
         }
 
         #endregion
@@ -85,52 +82,63 @@ namespace FeelGreatIn8.ViewModels
         #region Class Methods
 
         internal void OnAppearing()
-         {
+        {
+            //Get file data
             var text = File.ReadAllText(filePath);
             var result = JsonConvert.DeserializeObject<List<Day>>(text);
-            
-            if (result == null)
+
+            //Fill in assigned data.
+            if (Days == null)
             {
-                var template = new List<Day>()
+                if (result == null)
                 {
-                    new Day
+                    var template = new List<Day>()
                     {
-                        DayName = "Monday",
-                    },
-                    new Day
-                    {
-                        DayName = "Tuesday",
-                    },
-                    new Day
-                    {
-                        DayName = "Wednesday",
-                    },
-                    new Day
-                    {
-                        DayName = "Thursday",
-                    },
-                    new Day
-                    {
-                        DayName = "Friday",
-                    },
-                    new Day
-                    {
-                        DayName = "Saturday",
-                    },
-                    new Day
-                    {
-                        DayName = "Sunday",
-                    },
-                };
-                Days.ReplaceRange(template);
+                        new Day
+                        {
+                            DayName = "Monday",
+                        },
+                        new Day
+                        {
+                            DayName = "Tuesday",
+                        },
+                        new Day
+                        {
+                            DayName = "Wednesday",
+                        },
+                        new Day
+                        {
+                            DayName = "Thursday",
+                        },
+                        new Day
+                        {
+                            DayName = "Friday",
+                        },
+                        new Day
+                        {
+                            DayName = "Saturday",
+                        },
+                        new Day
+                        {
+                            DayName = "Sunday",
+                        },
+                    };
+                    Days = new ObservableRangeCollection<Day>(template);
+                }
+                else
+                {
+                    Days = new ObservableRangeCollection<Day>(result);
+                }
             }
-            else
-            {
-                Days.ReplaceRange(result);
-            }
+
+            //Select latest day
             var today = DateTime.Now.DayOfWeek.ToString();
-            SelectedDay = Days.FirstOrDefault(x => today.Contains(x.DayName));
-            Position = Days.IndexOf(SelectedDay);
+            var currentDay = Days.FirstOrDefault(x => today.Contains(x.DayName));
+            var index = Days.IndexOf(currentDay);
+            if (index >= 0) 
+            {
+                Position = index;
+            }
         }
 
         internal void Disappearing()
@@ -146,7 +154,41 @@ namespace FeelGreatIn8.ViewModels
 
         #region CommandHandlers
 
-
+        private void ResetMethod(object obj)
+        {
+            var template = new List<Day>()
+            {
+                new Day
+                {
+                    DayName = "Monday",
+                },
+                new Day
+                {
+                    DayName = "Tuesday",
+                },
+                new Day
+                {
+                    DayName = "Wednesday",
+                },
+                new Day
+                {
+                    DayName = "Thursday",
+                },
+                new Day
+                {
+                    DayName = "Friday",
+                },
+                new Day
+                {
+                    DayName = "Saturday",
+                },
+                new Day
+                {
+                    DayName = "Sunday",
+                },
+            };
+            Days.ReplaceRange(template);
+        }
 
         #endregion
 
